@@ -125,6 +125,6 @@ Route::group(['middleware'=>['auth']],function()
 //in registerController\\\\\\\\
 use Illuminate\Support\Facades\Hash;
 Route::get('test',function(){
-    echo Hash::make("12345678");
+    echo Hash::make("admin123");
 });
 // 
