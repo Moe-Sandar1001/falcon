@@ -102,7 +102,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                {{--                                                <label for="title">Title</label>--}}
+                                                {{--<label for="title">Title</label>--}}
                                                 <textarea name="title" id="title" class="form-control" rows="1" placeholder="Title" required></textarea>
                                             </div>
 
@@ -123,21 +123,20 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        {{-- <label for="des">Description</label> --}}
+                                        <label for="des">Description</label>
                                         <textarea name="detail" rows="8" class="form-control" id="detail" required></textarea>
                                     </div>
 
                                 </div>
                             </div><br>
 
-                            <div class="row">
+                            {{-- <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        {{-- <label for="des">Description</label> --}}
                                         <textarea name="table" rows="8" class="form-control" id="table" required></textarea>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
                             <div class="row">
                                 <div class="col-md-12">
