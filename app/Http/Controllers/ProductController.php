@@ -51,7 +51,7 @@ class ProductController extends Controller
             'title'=>$request->get('title'),
             'category_id'=>$request->get('category_id'),
             'detail'=>$request->get('detail'),
-            'summertable'=> $request->get('table'),
+            // 'summertable'=> $request->get('table'),
             'download_link'=> $pdf_name
         ]);
         // return $request->get('table');
@@ -131,7 +131,7 @@ class ProductController extends Controller
                 if (file_exists($image_path)) {
                     unlink($image_path);
                 }
-        
+
 
                 Product::findOrFail($id)->update([
                     'photo' => $photo_name,

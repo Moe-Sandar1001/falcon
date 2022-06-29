@@ -49,7 +49,7 @@ Route::group(['middleware'=>['auth']],function()
     Route::post('/update/category', 'CategoryController@update');
     Route::get('/admin/delete/cat_product/{id}', 'CategoryController@destroy_cat_product');
     Route::delete('/admin/delete/category/{id}', 'CategoryController@destroy_category');
-    
+
 
 //    product
     Route::post('/insert/product','ProductController@store');
@@ -105,7 +105,7 @@ Route::group(['middleware'=>['auth']],function()
 //slide photo
     Route::get('/admin/banner', 'BannerController@index');
     Route::get('get_all_banner', 'BannerController@get_all_banner');
-    Route::get('/edit/banner/{id}', 'BannerController@edit');    
+    Route::get('/edit/banner/{id}', 'BannerController@edit');
     Route::post('/update/banner', 'BannerController@update');
 
 
@@ -127,4 +127,4 @@ use Illuminate\Support\Facades\Hash;
 Route::get('test',function(){
     echo Hash::make("admin123");
 });
-// 
+//

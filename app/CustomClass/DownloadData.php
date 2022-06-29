@@ -20,6 +20,7 @@ class DownloadData
 
     /**
      * @return mixed
+     * 
      */
     public function getDownloadData()
     {

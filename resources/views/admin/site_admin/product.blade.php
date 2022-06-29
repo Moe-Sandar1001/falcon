@@ -66,7 +66,7 @@
                                         Download
                                     </th>
                                     <th>Action</th>
-                                    
+
                                     </thead>
                                     <tbody>
 
@@ -115,7 +115,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -126,7 +126,7 @@
                                         {{-- <label for="des">Description</label> --}}
                                         <textarea name="detail" rows="8" class="form-control" id="detail" required></textarea>
                                     </div>
-                                    
+
                                 </div>
                             </div><br>
 
@@ -199,14 +199,14 @@
                                     </div>
                                 </div>
                             </div>
-                          
+
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         {{-- <label for="des">Description</label> --}}
                                         <textarea name="detail" rows="8" class="form-control" id="update_detail" required></textarea>
                                     </div>
-                                    
+
                                 </div>
                             </div><br>
 
@@ -313,8 +313,8 @@
                     success: function(data){
                         //alert(data);
                         console.log(data);
-                        $("#detail").summernote('reset');
-                        $("#table").summernote('reset');
+                        // $("#detail").summernote('reset');
+                        // $("#table").summernote('reset');
                         $('#modalBox').modal('hide');
                         toastr.success('Insert product data successful');
                         load();
@@ -366,7 +366,7 @@
                             ],
                         });
                         $('#update_table').summernote('code',product['summertable']);
-                        $('#update_pdf').val(product['download_link']);                                   
+                        $('#update_pdf').val(product['download_link']);
                         $('#edit_modalBox').modal('show');
                     }
                 });
@@ -414,40 +414,40 @@
             }
 
             // start summernote
-            $("#detail").summernote({
-                height : "150px",
-                placeholder: 'Detail',
-                toolbar: [
-                    ['style', ['style','bold', 'italic', 'underline', 'clear','fontname','fontsize']],
-                    ['table', ['table']],
-                    ['font', ['strikethrough', 'superscript', 'subscript']],
-                    ['color', ['color']],
-                    ['para', ['ul', 'ol', 'paragraph']],
-                    ['height', ['height']],
-                    ['view', ['fullscreen', 'codeview', 'help']],
-                ],
-            });
+            // $("#detail").summernote({
+            //     height : "150px",
+            //     placeholder: 'Detail',
+            //     toolbar: [
+            //         ['style', ['style','bold', 'italic', 'underline', 'clear','fontname','fontsize']],
+            //         ['table', ['table']],
+            //         ['font', ['strikethrough', 'superscript', 'subscript']],
+            //         ['color', ['color']],
+            //         ['para', ['ul', 'ol', 'paragraph']],
+            //         ['height', ['height']],
+            //         ['view', ['fullscreen', 'codeview', 'help']],
+            //     ],
+            // });
 
-            $("#table").summernote({
-                height : "150px",
-                placeholder: 'Data',
-                toolbar: [
-                    ['style', ['style','bold', 'italic', 'underline', 'clear','fontname','fontsize']],
-                    ['table', ['table']],
-                    ['font', ['strikethrough', 'superscript', 'subscript']],
-                    ['color', ['color']],
-                    ['para', ['ul', 'ol', 'paragraph']],
-                    ['height', ['height']],
-                    ['view', ['fullscreen', 'codeview', 'help']],
-                ],
-            });
+            // $("#table").summernote({
+            //     height : "150px",
+            //     placeholder: 'Data',
+            //     toolbar: [
+            //         ['style', ['style','bold', 'italic', 'underline', 'clear','fontname','fontsize']],
+            //         ['table', ['table']],
+            //         ['font', ['strikethrough', 'superscript', 'subscript']],
+            //         ['color', ['color']],
+            //         ['para', ['ul', 'ol', 'paragraph']],
+            //         ['height', ['height']],
+            //         ['view', ['fullscreen', 'codeview', 'help']],
+            //     ],
+            // });
 
-            $(document).on('click','.note-btn',function(){
-                $(".note-group-select-from-files label").text("Upload image");
-                $(".note-group-select-from-files label").attr('class','btn btn-primary');
-                $(".note-group-select-from-files label").attr("for","photo_summernote");
-                $(".note-group-select-from-files input:file").attr("id","photo_summernote");
-            });
+            // $(document).on('click','.note-btn',function(){
+            //     $(".note-group-select-from-files label").text("Upload image");
+            //     $(".note-group-select-from-files label").attr('class','btn btn-primary');
+            //     $(".note-group-select-from-files label").attr("for","photo_summernote");
+            //     $(".note-group-select-from-files input:file").attr("id","photo_summernote");
+            // });
 
         });
     </script>
