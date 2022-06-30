@@ -102,7 +102,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                {{--<label for="title">Title</label>--}}
+                                                {{--                                                <label for="title">Title</label>--}}
                                                 <textarea name="title" id="title" class="form-control" rows="1" placeholder="Title" required></textarea>
                                             </div>
 
@@ -123,20 +123,21 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="des">Description</label>
+                                        {{-- <label for="des">Description</label> --}}
                                         <textarea name="detail" rows="8" class="form-control" id="detail" required></textarea>
                                     </div>
 
                                 </div>
                             </div><br>
 
-                            {{-- <div class="row">
+                            <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
+                                        {{-- <label for="des">Description</label> --}}
                                         <textarea name="table" rows="8" class="form-control" id="table" required></textarea>
                                     </div>
                                 </div>
-                            </div> --}}
+                            </div>
 
                             <div class="row">
                                 <div class="col-md-12">
@@ -312,8 +313,8 @@
                     success: function(data){
                         //alert(data);
                         console.log(data);
-                        // $("#detail").summernote('reset');
-                        // $("#table").summernote('reset');
+                        $("#detail").summernote('reset');
+                        $("#table").summernote('reset');
                         $('#modalBox').modal('hide');
                         toastr.success('Insert product data successful');
                         load();
@@ -413,40 +414,40 @@
             }
 
             // start summernote
-            // $("#detail").summernote({
-            //     height : "150px",
-            //     placeholder: 'Detail',
-            //     toolbar: [
-            //         ['style', ['style','bold', 'italic', 'underline', 'clear','fontname','fontsize']],
-            //         ['table', ['table']],
-            //         ['font', ['strikethrough', 'superscript', 'subscript']],
-            //         ['color', ['color']],
-            //         ['para', ['ul', 'ol', 'paragraph']],
-            //         ['height', ['height']],
-            //         ['view', ['fullscreen', 'codeview', 'help']],
-            //     ],
-            // });
+            $("#detail").summernote({
+                height : "150px",
+                placeholder: 'Detail',
+                toolbar: [
+                    ['style', ['style','bold', 'italic', 'underline', 'clear','fontname','fontsize']],
+                    ['table', ['table']],
+                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['height', ['height']],
+                    ['view', ['fullscreen', 'codeview', 'help']],
+                ],
+            });
 
-            // $("#table").summernote({
-            //     height : "150px",
-            //     placeholder: 'Data',
-            //     toolbar: [
-            //         ['style', ['style','bold', 'italic', 'underline', 'clear','fontname','fontsize']],
-            //         ['table', ['table']],
-            //         ['font', ['strikethrough', 'superscript', 'subscript']],
-            //         ['color', ['color']],
-            //         ['para', ['ul', 'ol', 'paragraph']],
-            //         ['height', ['height']],
-            //         ['view', ['fullscreen', 'codeview', 'help']],
-            //     ],
-            // });
+            $("#table").summernote({
+                height : "150px",
+                placeholder: 'Data',
+                toolbar: [
+                    ['style', ['style','bold', 'italic', 'underline', 'clear','fontname','fontsize']],
+                    ['table', ['table']],
+                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['height', ['height']],
+                    ['view', ['fullscreen', 'codeview', 'help']],
+                ],
+            });
 
-            // $(document).on('click','.note-btn',function(){
-            //     $(".note-group-select-from-files label").text("Upload image");
-            //     $(".note-group-select-from-files label").attr('class','btn btn-primary');
-            //     $(".note-group-select-from-files label").attr("for","photo_summernote");
-            //     $(".note-group-select-from-files input:file").attr("id","photo_summernote");
-            // });
+            $(document).on('click','.note-btn',function(){
+                $(".note-group-select-from-files label").text("Upload image");
+                $(".note-group-select-from-files label").attr('class','btn btn-primary');
+                $(".note-group-select-from-files label").attr("for","photo_summernote");
+                $(".note-group-select-from-files input:file").attr("id","photo_summernote");
+            });
 
         });
     </script>
